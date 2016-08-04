@@ -1,9 +1,9 @@
-version: '2'
+version: '2' # Docker Compose config spec version
 services:
   # Go Carbon (Carbon replacement)
   # Takes care of writing metrics to database and data retention
   carbon:
-    image: carbon:v1
+    image: registry.vivino.com/carbon:v1
     build:
       dockerfile: Carbon.dockerfile
       context: .
@@ -17,7 +17,7 @@ services:
   # Brubeck (StatsD replacement)
   # Aggregates metrics before sending them to Carbon
   brubeck:
-    image: brubeck:v1
+    image: registry.vivino.com/brubeck:v1
     build:
       dockerfile: Brubeck.dockerfile
       context: .
@@ -30,7 +30,7 @@ services:
   # Graphite API (yep, almost original Graphite Web)
   # Provides API for reading metrics
   graphite-api:
-    image: brutasse/graphite-api:latest
+    image: registry.vivino.com/graphite-api:latest
     build:
       context: https://github.com/brutasse/graphite-api.git
     environment:
@@ -46,7 +46,7 @@ services:
   # Grafana
   # Metrics dashboard
   grafana:
-    image: grafana:v1
+    image: registry.vivino.com/grafana:v1
     build:
       dockerfile: Grafana.dockerfile
       context: .
