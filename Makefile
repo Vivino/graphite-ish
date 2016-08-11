@@ -1,12 +1,11 @@
-graphite:
+build:
 	docker-compose build
 
-fast:
-	@echo "Graphite is fast now!"
-
-again:
-
-build: graphite
-
-run:
+run: build
 	docker-compose up
+
+release: build
+	cat docker-compose.yml \
+	| grep "registry.vivino.com" \
+	| cut -d" " -f6 \
+	| xargs -n1 docker push
