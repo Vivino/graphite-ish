@@ -24,7 +24,7 @@ daemon with other compatible components to improve
 [performance](https://github.com/lomik/go-carbon/tree/v0.7.2#performance) and
 [throughput](https://github.com/github/brubeck/tree/5d139a4#faq).
 
-Grafana 3 is also included.
+Grafana 4 is also included.
 
 ### Included images
 | Component | Version |   |
@@ -32,7 +32,7 @@ Grafana 3 is also included.
 | [go-carbon](https://github.com/lomik/go-carbon/tree/v0.7.2) | `v0.7.2` | Drop-in replacement for original `carbon` daemon, written in Go |
 | [Brubeck](https://github.com/github/brubeck/tree/5d139a4) | `5d139a4` | Easy replacement for `StatsD`, written in C |
 | [Graphite API](https://github.com/brutasse/graphite-api) | `latest` | A piece of original `Graphite Web` component with less features |
-| [Grafana](https://github.com/grafana/grafana/tree/v3.1.0-beta1) | `v3.1.0-beta1` | Beautiful dashboard for all of that |
+| [Grafana](https://github.com/grafana/grafana/tree/v4.1.1) | `v4.1.1` | Beautiful dashboard for all of that |
 
 ## Building
 
